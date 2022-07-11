@@ -15,7 +15,7 @@ import br.com.msmailsender.MSmailsender.service.EmailService;
 
 @RestController
 @RequestMapping(value = "/mail-sender")
-@CrossOrigin(origins = "http://localhost:8000")
+@CrossOrigin(origins = "https://weare3d.netlify.app")
 public class IndexController {
 	
 	@Autowired
