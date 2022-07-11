@@ -4,7 +4,7 @@ import br.com.msmailsender.MSmailsender.enums.StatusEmail;
 
 public class EmailModel {
 
-	private String from = "rogeriosinsemdasilva@gmail.com";
+	private String from = "testesimsen@gmail.com";
 	private String to = "rogeriosimsen@outlook.com";
 
 	private String fullName = null;
