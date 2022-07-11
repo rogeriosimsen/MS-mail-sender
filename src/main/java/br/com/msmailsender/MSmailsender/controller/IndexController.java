@@ -3,6 +3,7 @@ package br.com.msmailsender.MSmailsender.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import br.com.msmailsender.MSmailsender.service.EmailService;
 
 @RestController
 @RequestMapping(value = "/mail-sender")
+@CrossOrigin(origins = "http://localhost:8000")
 public class IndexController {
 	
 	@Autowired
