@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.msmailsender.MSmailsender.enums.StatusEmail;
 import br.com.msmailsender.MSmailsender.model.EmailModel;
 import br.com.msmailsender.MSmailsender.service.EmailService;
 
@@ -28,7 +29,7 @@ public class IndexController {
 	}
 	
 	@PostMapping(value = "/send", produces = "application/json")
-	public ResponseEntity<EmailModel> sendEmail(@RequestBody EmailModel emailModel){
+	public StatusEmail sendEmail(@RequestBody EmailModel emailModel){
 		
 		EmailModel email = new EmailModel();
 		
@@ -38,7 +39,7 @@ public class IndexController {
 		
 		emailService.sendEmail(email);
 		
-		return new ResponseEntity<EmailModel>(email, HttpStatus.OK);
+		return email.getStatusEmail();
 	}
 
 }
